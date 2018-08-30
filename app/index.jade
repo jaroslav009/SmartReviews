@@ -1,0 +1,327 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title SmartReviews
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='og:image', content='path/to/image.jpg')
+    link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='img/favicon/apple-touch-icon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+    // Chrome, Firefox OS and Opera
+    meta(name='theme-color', content='#000')
+    // Windows Phone
+    meta(name='msapplication-navbutton-color', content='#000')
+    // iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    link(rel='stylesheet', href='css/main.min.css')
+  body
+    .header(style='background-image: url(img/bg.png);')
+      .container
+        .row
+          // Top navigation header
+          .col-md-12
+            .top_header
+              ul.top_header__list
+                li
+                  a(href='#') About Us
+                li
+                  a(href='#') Contacts
+          // Logo
+          .col-md-12
+            .logo
+              img(src='img/logo.png', alt='Logo')
+          // Title header
+          .col-md-12
+            .header_title
+              h1 Only true and best reviews from the industry professionals
+              p Over 1000+ truthful reviews of different products and services
+          // Input search
+          .col-md-12
+            .search
+              input(type='text', placeholder='Find a review')
+              .icon_search
+                i.fas.fa-search
+          // Bottom navigation
+      .header__bottom_nav
+        .bottom_nav__item
+          a(href='#')
+            | Electronics
+        .bottom_nav__item.dropdown_list
+          span
+            | Computers
+          .dropdown_menu
+            ul
+              li.item_dropdown
+                a(href='#') Laptops
+              li.item_dropdown
+                a(href='#')
+                  | Tablets
+              li.item_dropdown
+                a(href='#')
+                  | TV's
+              li.item_dropdown.dropdown_action
+                a(href='#')
+                  | Cell Phones & Services
+                .sub_dropdown
+                  ul
+                    li.item_dropdown.item_dropdown_sub
+                      a(href='#') Laptops
+                    li.item_dropdown.item_dropdown_sub
+                      a(href='#')
+                        | Tablets
+                    li.item_dropdown.item_dropdown_sub
+                      a(href='#')
+                        | TV's
+                    li.item_dropdown.item_dropdown_sub
+                      a(href='#')
+                        | Cell Phones & Services
+                    li.item_dropdown.item_dropdown_sub
+                      a(href='#')
+                        | Pronters
+                    li.item_dropdown.item_dropdown_sub
+                      a(href='#')
+                        | Keyboards
+                    li.item_dropdown.item_dropdown_sub
+                      a(href='#')
+                        | Mouses
+                    li.item_dropdown.item_dropdown_sub
+                      a(href='#')
+                        | Web Cams
+              li.item_dropdown
+                a(href='#')
+                  | Pronters
+              li.item_dropdown
+                a(href='#')
+                  | Keyboards
+              li.item_dropdown
+                a(href='#')
+                  | Mouses
+              li.item_dropdown
+                a(href='#')
+                  | Web Cams
+        .bottom_nav__item
+          a(href='#')
+            | Games
+        .bottom_nav__item
+          a(href='#')
+            | Music
+        .bottom_nav__item
+          a(href='#')
+            | Appliances
+        .bottom_nav__item
+          a(href='#')
+            | Home & Garden
+        .bottom_nav__item
+          a(href='#')
+            | Sport
+        .bottom_nav__item
+          a(href='#')
+            | Cars
+        .bottom_nav__item
+          a(href='#')
+            | Services
+        .bottom_nav__item
+          a(href='#')
+            | More
+      a.hamburger.fixed_hamb(href='#my-menu')
+        span.hamburger-box.hamburger--slider
+          span.hamburger-inner
+      nav#my-menu
+        ul
+          li
+            a(href='/') Electronics
+          li
+            a(href='/') Computers
+            ul
+              li
+                a(href='/') Laptops
+              li
+                a(href='/') Tablets
+              li
+                a(href='/') TV's
+              li
+                a(href='/') Cell Phones & Services
+                ul
+                  li
+                    a(href='/') Laptops
+                  li
+                    a(href='/') Tablets
+                  li
+                    a(href='/') TV's
+                  li
+                    a(href='/') Cell Phones & Services
+                  li
+                    a(href='/') Printest
+                  li
+                    a(href='/') Keyboards
+                  li
+                    a(href='/') Mouses
+                  li
+                    a(href='/') Web Cams
+              li
+                a(href='/') Printest
+              li
+                a(href='/') Keyboards
+              li
+                a(href='/') Mouses
+              li
+                a(href='/') Web Cams
+          li
+            a(href='/') Games
+          li
+            a(href='/') Music
+          li
+            a(href='/') Appliances
+          li
+            a(href='/') Home & Garden
+          li
+            a(href='/') Sport
+          li
+            a(href='/') Cars
+    // News
+    section.s_news
+      .container
+        .row
+          // 1 row news
+          mixin text(image, title, author, date, content, list_tags)
+           .col-md-3.col-sm-6.col-6
+            .news_container_item
+              .img_item
+                .best_seller Best Seller
+                img(src='img/news/#{image}', alt='Image')
+              .cont_item
+                h3 #{title}
+                .starrr
+                .author
+                  p
+                    | by 
+                    span #{author}
+                    |  - #{date}
+                .content
+                  p
+                    | #{content}
+                .tags_item
+                  for name in list_tags1
+                    a(href='#')= name
+                .read_review
+                  a(href='#') Read review
+
+          // 1 item news
+          - content_news1 = "Improved speed everywhere (new processor, faster wireless, quicker Touch ID sensor); a sturdier body; better front and rear cameras; a bold new 3D Touch pressure-sensitive display that could ...";
+          - list_tags1 = ["mobile", "apple", "touch", "news"];
+          // 2 item news
+          - content_news2 = "As a whole the Xbox community has always been more interactive because of the Halo series. The PS4 following is still great but falls short. The fantastic sales records broken by Halo 5: Guardians shows...";
+          - list_tags2 = ["games", "action", "xbox", "pc", "ps4"];
+          
+          // 3 item news
+          -content_news3 = "Like the new Studio, the Solo 2, which weighs in at 7.2 ounces (205 grams), is built more sturdily and has no visible screws.";
+          - list_tags3 = ["music", "beats", "headphones", "beats solo", "streets", "lifestyle"];
+          
+          // 4 item news
+          -content_news4 = "The services they provide are quite basic - you get VPS's in the cloud and DNS management, that's all. No fancy load balancing, hosted databases, hadoop clusters, etc..";
+          -list_tags4 = ["server", "service", "hosting", "cheap", "cloud", "popular"];
+       .container
+        .row
+          +text("iphone_6s.png", "Apple iPhone 6S review", "John Mayer", "Nov 2, 2015", content_news1, list_tags1)
+          +text("halo.png", "Why Halo 5: Guardians Record Breaking Sales", "Jeffrey Wallens", "Nov 2, 2015", content_news2, list_tags2)
+          +text("beats_solo.png", "Beats Solo 2 review", "David Carnoy", "Oct 14, 2015", content_news3, list_tags3)
+          +text("digitalOcean.png", "DigitalOcean. Simple Cloud Hosting, Built for Developers", "Helen Fiesko", "Oct 22, 2015", content_news3, list_tags3)
+          // 2 row news
+      .container
+        .row
+          +text("digitalOcean.png", "DigitalOcean. Simple Cloud Hosting, Built for Developers", "Helen Fiesko", "Oct 22, 2015", content_news3, list_tags3)
+          +text("halo.png", "Why Halo 5: Guardians Record Breaking Sales", "Jeffrey Wallens", "Nov 2, 2015", content_news2, list_tags2)
+          +text("beats_solo.png", "Beats Solo 2 review", "David Carnoy", "Oct 14, 2015", content_news3, list_tags3)
+          +text("iphone_6s.png", "Apple iPhone 6S review", "John Mayer", "Nov 2, 2015", content_news1, list_tags1)
+          
+      // 3 row news
+      .container
+        .row
+          +text("digitalOcean.png", "DigitalOcean. Simple Cloud Hosting, Built for Developers", "Helen Fiesko", "Oct 22, 2015", content_news3, list_tags3)
+          +text("beats_solo.png", "Beats Solo 2 review", "David Carnoy", "Oct 14, 2015", content_news3, list_tags3)
+          +text("halo.png", "Why Halo 5: Guardians Record Breaking Sales", "Jeffrey Wallens", "Nov 2, 2015", content_news2, list_tags2)
+          +text("iphone_6s.png", "Apple iPhone 6S review", "John Mayer", "Nov 2, 2015", content_news1, list_tags1)
+          
+          
+      .container
+        .row
+          .col-md-12
+            .load_more
+              button.load_more_btn Load More
+    footer.footer(style='background-image: url(img/bg_footer.png)')
+      .container
+        .row
+          .col-md-4.col-sm-4
+            .logo_footer
+              img(src='img/logo.png', alt='Logo')
+            .footer_about
+              h3 About
+              p
+                | SmartReviewer tracks all the latest consumer technology breakthroughs and shows you what's new, what matters, and how technology can enrich your life. We give you the information, tools, and advice that will help you decide what to buy and how to get the most out of the tech in your life. We give you the information, tools, and advice that will help you decide what to buy.
+            .popular_tags
+              h3 Popular tags
+              .tags_footer
+                a(href='#') music
+                a(href='#') beats
+                a(href='#') headpphones
+                a(href='#') beast solo
+                a(href='#') apple
+                a(href='#') streets
+                a(href='#') lifestyle
+                a(href='#') news
+                a(href='#') service
+                a(href='#') cloud
+                a(href='#') touch
+                a(href='#') samsung
+                a(href='#') mobile
+                a(href='#') xbox
+          .col-md-8.col-sm-8
+
+            .img_footer
+              h3 Best Rates Products
+              .container_img
+                mixin footer_block(image, title, author, date)
+                   .img_footer__item(style='background-image: url(img/footer/#{image});')
+                     .img_footer__content
+                       span #{title}
+                       .starrr.foot1
+                       .author_foot
+                         | by 
+                         span #{author}
+                         |  - #{date}
+                     .bg_img
+                +footer_block("iphone_6s.png", "iPhone 6S review", "John Mayer", "Nov 2, 2015")
+                +footer_block("assassins.png", "Assassin's Creed Syndicate review", "David Camoy", "Oct 12, 2015")
+                +footer_block("nikon_d750.png", "Nikon D750 review", "John Mayer", "Nov 2, 2015")
+                
+                
+            .img_footer
+              h3 Best Latest Reviews
+              .container_img
+                +footer_block("samsung_unh6350.png", "Samsung UNH6350 series review", "John Mayer", "Nov 2, 2015")
+                +footer_block("beats_solo.png", "Beats Solo 2. Why is it so popular?", "David Camoy", "Oct 12, 2015")
+                +footer_block("galaxyS6.png", "Samsung Galaxy S6", "John Mayer", "Nov 2, 2015")
+      .bottom_footer
+        .container
+          .row
+            .col-md-12
+              .bottom_footer__content
+                img(src='img/icon-mail.png', alt='Mail')
+                p
+                  | Have a questions?
+                  span contacts@smartreviewer.com
+                .bottom_footer__social
+                  a(href='#')
+                    i.fab.fa-facebook-f
+                  a(href='#')
+                    i.fab.fa-twitter
+                  a(href='#')
+                    i.fab.fa-google-plus-g
+                  a(href='#')
+                    i.fab.fa-pinterest-p
+    script(src='js/scripts.min.js')
+

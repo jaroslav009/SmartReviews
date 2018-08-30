@@ -1,0 +1,10 @@
+Run Gulp:
+1. You must enter in command line "npm i"
+2. Then enter in command line "gulp" after server will start
+3. To view a site in a browser write: "localhost:3000"
+
+
+Запуск Gulp:
+1. Ви повинні прописати в командній стрічці: "npm i"
+2. Потім пропишіть в командній стрічці "gulp" після цього сервер запуститься
+3. Щоб подивитися на сайт в браузері напишіть: "localhost:3000"

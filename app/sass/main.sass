@@ -1,0 +1,345 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+// Section header
+
+.header
+	background-size: cover
+	background-repeat: no-repeat
+
+.top_header
+	display: flex
+	justify-content: flex-end
+.top_header__list
+	li 
+		list-style-type: none
+		display: inline-block
+		a 
+			margin-right: 40px
+			color: #ffffff
+			transition: .5s ease
+			font-family: AvenirNextCyr-Light
+			&:hover
+				color: #ffe89c
+.logo
+	width: 190px
+	margin: 0 auto
+	margin-top: 40px
+.header_title
+	text-align: center
+	margin-top: 50px
+	color: #ffffff
+	h1 
+		font-size: 31px
+		font-family: AvenirNextCyr
+	p 
+		font-size: 22px
+		font-family: AvenirNextCyr-Light
+		margin-top: 25px
+		margin-bottom: 47px
+.search
+	max-width: 530px
+	margin: 0 auto
+	input 
+		width: 100%
+		padding: 10px 22px
+		padding-right: 34px
+		border-radius: 4px
+		border: none
+		box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15)
+	i
+		position: absolute
+		top: -100%
+		font-size: 15px
+		color: #646d72
+	.icon_search
+		width: 26px
+		height: 26px
+		line-height: 26px
+		text-align: center
+		margin-right: -26px
+		position: relative
+		z-index: 1
+		float: right
+		margin-right: 20px
+.header__bottom_nav
+	margin-top: 120px
+	background-color: rgba(50, 50, 50, 0.5)
+	-webkit-box-shadow: 0px 6px 42px 0px rgba(0,0,0,0.5)
+	-moz-box-shadow: 0px 6px 42px 0px rgba(0,0,0,0.5)
+	box-shadow: 0px 6px 42px 0px rgba(0,0,0,0.5)
+	min-height: 50px
+	text-align: center
+.list__bottom_nav
+	text-align: center
+	li 
+		display: inline-block
+		list-style-type: none
+		a 
+			font-size: 15px
+			color: #ffffff
+			min-height: 50px
+.bottom_nav__item
+	text-align: center
+	color: #ffffff
+	display: inline-block
+	min-height: 50px
+	cursor: pointer
+	padding-top: 20px
+	padding-right: 20px
+	padding-left: 20px
+	&:hover
+		background-color: #e6e6e7
+		color: #333333
+		transition: .5s ease
+		a 
+			color: #333333
+			text-decoration: none
+		.dropdown_menu
+			display: block
+	a 
+		color: #ffffff
+.dropdown_menu
+	position: absolute
+	color: #333333
+	display: none
+	margin-left: -20px
+	ul 
+		list-style-type: none
+		background-color: #e7e7e8
+		max-width: 200px
+		padding: 0
+		li 
+			a 
+				text-decoration: underline
+.sub_dropdown
+	position: absolute
+	color: #333333
+	display: none
+	ul 
+		list-style-type: none
+		background-color: #e7e7e8
+		max-width: 200px
+		padding: 0
+		li 
+			a 
+				text-decoration: underline
+.item_dropdown
+	width: 100%
+	padding: 10px 0
+	min-width: 170px
+	a 
+		text-decoration: underline
+		color: #333333
+	&:hover
+		background-color: #3c3c3d
+		a 
+			color: #ffffff
+			text-decoration: none
+.dropdown_action
+	.item_dropdown
+		a 
+			color: #333333
+	&:hover 
+		.sub_dropdown
+			display: block
+			margin-left: 170px
+			margin-top: -31px
+.item_dropdown_sub
+	&:hover 
+		a
+			color: #ffffff
+.fixed_hamb
+	position: absolute
+	top: 0
+	display: none
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+		background-color: #ffffff
+
+// Section News
+.s_news
+	margin-top: 60px
+.best_seller
+	position: absolute
+	background-color: #d04141
+	text-transform: uppercase
+	padding: 5px 4px
+	color: #ffffff
+	font-family: AvenirNextCyr-Medium, sans-serif
+.news_container_item
+	display: flex
+	flex-direction: column
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25)
+	cursor: pointer
+	transition: .5s ease
+	padding-bottom: 10px
+	margin-top: 40px
+	&:hover
+		background-color: rgb(255, 255, 255)
+		box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5)
+		.read_review
+			a 
+				color: #834f2b
+
+	.cont_item
+		padding: 0 20px
+		h3 
+			font-family: AvenirNextCyr-Heavy, sans-serif
+			font-size: 15px
+	.img_item
+		img 
+			width: 100%
+	.author
+		p 
+			font-family: AvenirNextCyr-Light
+			span 
+				color: #7b431d
+	.content
+		color: #7e7e7e
+	.tags_item
+		a 
+			text-decoration: underline
+			color: #7e7e7e
+			margin-right: 10px
+			display: inline-block
+	.read_review
+		text-align: right
+		border-top: 1px solid #f3f3f3
+		margin-top: 25px
+		padding-top: 12px
+		a 
+			color: #626262
+			text-transform: uppercase
+.load_more_btn
+	background-color: #ffffff
+	border: 1px solid #b7b7b7
+	color: #b7b7b7
+	text-align: center
+	margin: 0 auto
+	width: 250px
+	height: 50px
+	text-transform: uppercase
+	transition: .5s ease
+	&:hover
+		background-color: #ffe36d
+		color: #907710
+		border: none
+.load_more
+	display: flex
+	justify-content: center
+	margin-top: 45px
+
+// Footer
+.footer
+	background-size: cover
+	background-position: center
+	margin-top: 35px
+	h3 
+		color: #ffe89c
+.logo_footer
+	margin-top: 70px
+	margin-bottom: 70px
+.footer_about
+	margin-bottom: 80px
+	h3
+		font-family: AvenirNextCyr-Medium, sans-serif
+	p 
+		color: #d8d8d8
+		font-family: Avenir-Book
+.tags_footer
+	a 
+		margin-right: 30px
+		color: #d4d4d4
+		text-decoration: underline
+		font-size: 13px
+		display: inline-block
+.img_footer
+	display: flex
+	flex-direction: column
+	margin-left: 100px
+.container_img
+	display: flex
+.img_footer__item
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	width: 100%
+	height: 210px
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat	
+	text-align: left
+	cursor: pointer
+	transition: .5 ease
+	&:hover
+		.bg_img
+			opacity: 0
+			transition: .5 ease
+	color: #ffffff
+	margin-right: 20px
+	span 
+		font-family: Avenir-Black
+		font-size: 14px
+	.foot_rat1
+		color: #fcd51c
+	.bg_img
+		width: 210px
+		height: 210px
+		background-color: rgb(86, 79, 72)
+		opacity: 0.549
+		position: absolute
+		width: 195px
+		height: 195px
+		margin-top: -7px
+		transition: opacity .5 ease
+		&:hover
+			opacity: 0
+			transition: .5 ease
+	.img_footer__content
+		margin-bottom: 20px
+		margin-left: 15px
+		z-index: 3
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+.author_foot
+	font-size: 11px
+	font-family: AvenirNextCyr-Light
+	span
+		font-family: AvenirNextCyr-Medium
+.footer_container_img
+	display: flex
+.bottom_footer
+	background-color: #3d3d3d
+	margin-top: 50px
+	padding: 10px 0
+	img, p 
+		display: inline
+	img 
+		margin-right: 21px
+	p 
+		color: #ffffff
+		font-family: Avenir-Book
+		font-size: 12px
+		span 
+			margin-left: 22px
+			font-family: AvenirNextCyr-Medium
+.bottom_footer__social
+	margin-left: 43px
+	display: inline-block
+	a 
+		color: rgba(255, 255, 255, 1)
+		margin-right: 22px
+		transition: color .5s ease
+		&:hover
+			color: #ffe89c
+
+// Custom style for mmenu
+.mm-menu_offcanvas.mm-menu_opened
+	z-index: 1
+
+@import "media"
